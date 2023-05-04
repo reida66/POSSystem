@@ -87,7 +87,7 @@ public class TerminalTests
         // Act
         foreach (var item in scan) terminal.ScanProduct(item.ToString());
 
-        var actual = terminal.TotalCost();
+        var actual = terminal.CalculTotal();
 
         // Assert
         Assert.Equal(expected, actual);

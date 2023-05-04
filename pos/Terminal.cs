@@ -10,7 +10,7 @@ public class Terminal
         return _productList;
     }
 
-    public double TotalCost()
+    public double CalculTotal()
     {
         var total = 0.0;
         foreach (var product in _productList)
