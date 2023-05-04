@@ -2,9 +2,13 @@ namespace pos;
 
 public class Terminal
 {
+    private readonly Dictionary<string, int> _productList = new();
     private Dictionary<string, List<Tuple<int, double>>> _priceList = new();
 
-    private readonly Dictionary<string, int> _productList = new();
+    public Dictionary<string, int> GetProduceList()
+    {
+        return _productList;
+    }
 
     public double TotalCost()
     {

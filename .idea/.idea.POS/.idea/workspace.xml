@@ -7,8 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="716dd4b8-96a1-4a6f-af97-4389e565b21f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="716dd4b8-96a1-4a6f-af97-4389e565b21f" name="Changes" comment="run formatter">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.POS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.POS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POSTest/TerminalTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/POSTest/TerminalTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pos/Terminal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/pos/Terminal.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +18,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ConsoleUI/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConsoleUI/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/POSTest/TerminalTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Alann/RiderProjects/POS/pos/Terminal.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2PHGidyBw4ohMN4s6Xh480L65xv" />
@@ -76,8 +77,30 @@
       <option name="presentableId" value="Default" />
       <updated>1683106725787</updated>
       <workItem from="1683106726860" duration="786000" />
-      <workItem from="1683152899566" duration="20959000" />
+      <workItem from="1683152899566" duration="23213000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;POS Project&quot;">
+      <created>1683190583101</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683190583101</updated>
+    </task>
+    <task id="LOCAL-00002" summary="format code">
+      <created>1683190775170</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683190775170</updated>
+    </task>
+    <task id="LOCAL-00003" summary="run formatter">
+      <created>1683190940291</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683190940291</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +109,29 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="&quot;POS Project&quot;" />
+    <MESSAGE value="format code" />
+    <MESSAGE value="run formatter" />
+    <option name="LAST_COMMIT_MESSAGE" value="run formatter" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/POSTest/TerminalTests.cs</url>
+          <line>113</line>
+          <properties documentPath="C:\Users\Alann\RiderProjects\POS\POSTest\TerminalTests.cs" initialLine="106" containingFunctionPresentation="Method 'TestProductList'">
+            <startOffsets>
+              <option value="2972" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3003" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
