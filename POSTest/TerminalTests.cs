@@ -4,35 +4,37 @@ namespace POS.Test;
 
 public class TerminalTests
 {
-    public Dictionary<string, List<Tuple<int, double>>> setupDict()
+    private static Dictionary<string, List<Tuple<int, double>>> SetUpDict()
     {
-        var priceList = new Dictionary<string, List<Tuple<int, double>>>();
-        priceList.Add(
-            "A", new List<Tuple<int, double>>
+        var priceList = new Dictionary<string, List<Tuple<int, double>>>
+        {
             {
-                new(3, 3.0),
-                new(1, 1.25)
-            }
-        );
-        priceList.Add(
-            "B", new List<Tuple<int, double>>
+                "A", new List<Tuple<int, double>>
+                {
+                    new(3, 3.0),
+                    new(1, 1.25)
+                }
+            },
             {
-                new(1, 4.25)
-            }
-        );
-        priceList.Add(
-            "C", new List<Tuple<int, double>>
+                "B", new List<Tuple<int, double>>
+                {
+                    new(1, 4.25)
+                }
+            },
             {
-                new(6, 5.0),
-                new(1, 1.0)
-            }
-        );
-        priceList.Add(
-            "D", new List<Tuple<int, double>>
+                "C", new List<Tuple<int, double>>
+                {
+                    new(6, 5.0),
+                    new(1, 1.0)
+                }
+            },
             {
-                new(1, 0.75),
+                "D", new List<Tuple<int, double>>
+                {
+                    new(1, 0.75)
+                }
             }
-        );
+        };
         return priceList;
     }
 
@@ -46,14 +48,11 @@ public class TerminalTests
         // Arrange
         var terminal = new Terminal();
         var scan = input.ToCharArray();
-        terminal.SetPricing(setupDict());
+        terminal.SetPricing(SetUpDict());
         // Act
-        foreach (var item in scan)
-        {
-            terminal.ScanProduct(item.ToString());
-        }
+        foreach (var item in scan) terminal.ScanProduct(item.ToString());
 
-        double actual = terminal.TotalCost();
+        var actual = terminal.TotalCost();
 
         // Assert
         Assert.Equal(expected, actual);
@@ -66,14 +65,11 @@ public class TerminalTests
         // Arrange
         var terminal = new Terminal();
         var scan = input.ToCharArray();
-        terminal.SetPricing(setupDict());
+        terminal.SetPricing(SetUpDict());
         // Act
-        foreach (var item in scan)
-        {
-            terminal.ScanProduct(item.ToString());
-        }
+        foreach (var item in scan) terminal.ScanProduct(item.ToString());
 
-        double actual = terminal.TotalCost();
+        var actual = terminal.TotalCost();
 
         // Assert
         Assert.Equal(expected, actual);

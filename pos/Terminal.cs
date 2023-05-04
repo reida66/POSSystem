@@ -2,13 +2,9 @@ namespace pos;
 
 public class Terminal
 {
-    private Dictionary<string, List<Tuple<int, double>>> _priceList = new Dictionary<string, List<Tuple<int, double>>>()
-    {
-    };
+    private Dictionary<string, List<Tuple<int, double>>> _priceList = new();
 
-    private Dictionary<string, int> _productList = new Dictionary<string, int>()
-    {
-    };
+    private readonly Dictionary<string, int> _productList = new();
 
     public double TotalCost()
     {
@@ -21,7 +17,7 @@ public class Terminal
             foreach (var deal in _priceList[product.Key])
             {
                 var quotient = Math.DivRem(amount, deal.Item1, out var remainder);
-                total += (quotient * deal.Item2);
+                total += quotient * deal.Item2;
                 amount = remainder;
             }
         }
@@ -32,13 +28,9 @@ public class Terminal
     public void ScanProduct(string item)
     {
         if (_priceList.ContainsKey(item))
-        {
             _productList[item] = _productList.GetValueOrDefault(item, 0) + 1;
-        }
         else
-        {
             Console.WriteLine("unknown item, please set it aside and ask for help");
-        }
     }
 
     public void SetPricing(Dictionary<string, List<Tuple<int, double>>> priceList)
