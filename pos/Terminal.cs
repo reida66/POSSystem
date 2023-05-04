@@ -2,14 +2,14 @@ namespace pos;
 
 public class Terminal
 {
-    private Dictionary<string, List<Tuple<int,double>>> _priceList = new Dictionary<string, List<Tuple<int,double>>>()
+    private Dictionary<string, List<Tuple<int, double>>> _priceList = new Dictionary<string, List<Tuple<int, double>>>()
     {
     };
-    
+
     private Dictionary<string, int> _productList = new Dictionary<string, int>()
     {
     };
-    
+
     public double TotalCost()
     {
         var total = 0.0;
@@ -17,17 +17,15 @@ public class Terminal
         {
             var amount = product.Value;
             // make sure the price list is in order
-            _priceList[product.Key].Sort((x,y) => y.Item1.CompareTo(x.Item1));
+            _priceList[product.Key].Sort((x, y) => y.Item1.CompareTo(x.Item1));
             foreach (var deal in _priceList[product.Key])
-            {   
-                Console.WriteLine("Product: " + product.Key + " deal " + deal);
+            {
                 var quotient = Math.DivRem(amount, deal.Item1, out var remainder);
                 total += (quotient * deal.Item2);
                 amount = remainder;
-                Console.WriteLine("Total: $" + total + " quotient " + quotient + " remainder " + remainder);
-
             }
         }
+
         return total;
     }
 
@@ -43,10 +41,8 @@ public class Terminal
         }
     }
 
-    public void SetPricing(Dictionary<string, List<Tuple<int,double>>> priceList)
+    public void SetPricing(Dictionary<string, List<Tuple<int, double>>> priceList)
     {
         _priceList = priceList;
     }
-    
-    
 }
